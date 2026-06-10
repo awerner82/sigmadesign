@@ -668,9 +668,7 @@ ul {
         margin-top: 20px;
     }
 
-    .header-cta {
-        display: none;
-    }
+
 
     /* Checkbox Hack */
     .menu-toggle:checked ~ .nav {
