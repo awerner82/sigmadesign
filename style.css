@@ -857,6 +857,112 @@ ul {
     font-weight: 300;
 }
 
+/* ===== SEÇÃO PREÇO ÂNCORA ===== */
+.section-price {
+    background: var(--black);
+}
+
+.price-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 60px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow-neon);
+}
+
+.price-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 50px;
+}
+
+.price-comparisons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.price-compare-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 28px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: var(--transition);
+}
+
+.price-compare-item.risked {
+    opacity: 0.5;
+}
+
+.price-compare-item.risked .compare-value {
+    text-decoration: line-through;
+    color: var(--gray);
+}
+
+.price-compare-item.highlight-price {
+    background: rgba(0, 229, 255, 0.05);
+    border: 2px solid transparent;
+    background-image: linear-gradient(var(--black), var(--black)), var(--gradient);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 0 40px rgba(0, 229, 255, 0.1), 0 0 80px rgba(255, 0, 127, 0.08);
+}
+
+.compare-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.compare-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.compare-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.compare-value small {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--gray);
+    margin-left: 4px;
+}
+
+.highlight-price .compare-value strong {
+    font-size: 1.6rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.price-obs {
+    color: var(--gray);
+    font-size: 1rem;
+    margin-bottom: 40px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (max-width: 768px) {
     .faq-card {
         padding: 25px 20px;
@@ -879,5 +985,22 @@ ul {
     .how-step {
         max-width: 100%;
         width: 100%;
+    }
+
+    .price-box {
+        padding: 50px 24px;
+    }
+
+    .price-compare-item {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .compare-text {
+        font-size: 0.9rem;
+    }
+
+    .highlight-price .compare-value strong {
+        font-size: 1.3rem;
     }
 }
